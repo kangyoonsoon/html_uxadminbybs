@@ -10,6 +10,22 @@
             width: fit-content;
             height: 200px;
         }
+
+        a {
+        /* color: #428BCA; */
+        text-decoration: none;
+        }
+
+        a:hover, a:focus {
+            color: #2A6496;
+            text-decoration: none;
+        }
+
+        .member-search-container {
+          width: 700px;
+          height: 100px;
+        }
+
     </style>
     <title>Admin</title>
 
@@ -19,24 +35,24 @@
         <header>
             <div class="bg-success h-25 w-100">로그인</div>
             <div class="container-fluid">
-                <!-- h-100 안 먹는다 -->
                 <div class="row h-100 align-self-center bg-dark text-light text-center">
-                    <div class="col-lg-2 align-self-center p-3">Admin</div>
-                    <div class="col-lg align-self-center p-3">사이트운영</div>
-                    <div class="col-lg align-self-center p-3">SMS/메일</div>
-                    <div class="col-lg align-self-center p-3">디자인관리</div>
-                    <div class="col-lg align-self-center p-3">모바일 디자인관리</div>
-                    <div class="col-lg align-self-center p-3">통계</div>
-                    <div class="col-lg align-self-center p-3">환경설정</div>
-                    <div class="col-lg align-self-center p-3">메일</div>
-                    <div class="col-lg align-self-center p-3"></div>
-                    <div class="col-lg align-self-center p-3"></div>
+                    <div class="col-lg-2 align-self-center p-3"><a href="">Admin</a></div>
+                    <div class="col-lg align-self-center p-3"><a href="">사이트운영</a></div>
+                    <div class="col-lg align-self-center p-3"><a href="">SMS/메일</a></div>
+                    <div class="col-lg align-self-center p-3"><a href="">디자인관리</a></div>
+                    <div class="col-lg align-self-center p-3"><a href="">모바일 디자인관리</a></div>
+                    <div class="col-lg align-self-center p-3"><a href="">통계</a></div>
+                    <div class="col-lg align-self-center p-3"><a href="">환경설정</a></div>
+                    <div class="col-lg align-self-center p-3"><a href="">메일</a></div>
+                    <div class="col-lg align-self-center p-3"><a href=""></a></div>
+                    <div class="col-lg align-self-center p-3"><a href=""></a></div>
                 </div>
             </div>
         </header>
     </div>
-    <div class="container-fluid p-0 vh-100">
-        <div class="col-2 h-100 bg-dark">
+    <div class="container-fluid vh-100 p-0">
+      <div class="row">
+        <div class="col-2 vh-100 bg-dark">
             <aside class="text-light">
                 <!-- <div class="period">
                    
@@ -87,10 +103,146 @@
                     
             </aside>
         </div>
-        <div class="col">
+        <div class="col-10 bg-light">
+          <section>
+            <article>
+
+                <div class="article-top p-3">
+                  <p class="fs-3">회원 검색</p>
+                  <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#">회원관리</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">회원검색</li>
+                    </ol>
+                  </nav>
+                </div>
+
+                <div class="container-fluid">
+                  <div class="row align-items-center">
+                    <div class="col-6">
+                      <div class="member-search-container container p-3 bg-success mx-0">
+                        <div class="row justify-content-start align-items-center">
+                          <div class="col-3 bg-warning">
+                            <div class="">회원등급</div>
+                            <div class="">검색</div>
+                          </div>
+                          <div class="col-8 offset-1 bg-secondary">
+                            <form action="">
+                              <div class="">
+                                <div>
+                                  <input type="checkbox" name="entire-member" id="">
+                                  <label for="entire-member">전체</label>
+                                  <input type="checkbox" name="wait-leaver" id="">
+                                  <label for="wait-leaver">탈퇴대기자</label>
+                                  <input type="checkbox" name="wait-join" id="">
+                                  <label for="wait-join">가입신청자</label>
+                                </div>
+                                <div class="">
+                                <!-- <div class="row"> -->
+                                  <!-- <div class="col p-0 mx-0"> -->
+                                    <label for="name">이름:</label>
+                                  <!-- </div> -->
+                                  <!-- <div class="col p-0 mx-0"> -->
+                                    <select class="" name="name" id="">
+                                        <option value="">이름</option>
+                                        <option value="name">name</option>
+                                        <option value="id">id</option>
+                                    </select>
+                                  <!-- </div> -->
+                                  <!-- </div> -->
+                                  <!-- <div class="col mx-0"> -->
+                                    <input type="text" class="">
+                                  <!-- </div> -->
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="col offset-5 bg-primary">
+                      <button>검색</button>
+                    </div>
+                  </div>
+                </div>
+
+
+                <p class="fs-3 my-3">검색결과</p>
+                
+                <table class="table m-3">
+                  <thead>
+                    <tr>
+                      <th scope="col">번호</th>
+                      <th scope="col">아이디</th>
+                      <th scope="col">이름</th>
+                      <th scope="col">등급</th>
+                      <th scope="col">상태</th>
+                      <th scope="col">접속수</th>
+                      <th scope="col">가입일</th>
+                      <th scope="col">관리</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>sd111</td>
+                      <td>김하성</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>100</td>
+                      <td>2021.01.01</td>
+                      <td>////</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>toronto111</td>
+                      <td>류현진</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>100</td>
+                      <td>2021.01.01</td>
+                      <td>////</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>sl000</td>
+                      <td>김광현 </td>
+                      <td>2</td>
+                      <td>1</td>
+                      <td>50</td>
+                      <td>2021.01.01</td>
+                      <td>////</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <div class="d-flex justify-content-center">
+                  <nav aria-label="...">
+                    <ul class="pagination">
+                      <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">이전</a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item active">
+                        <a class="page-link" href="#">2 <span class="sr-only"></span></a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">다음</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+
+
+            </article>
+      
+          </section>
         </div>
+      </div>
     </div>
-    <section></section>
     <footer></footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
