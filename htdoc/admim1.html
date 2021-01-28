@@ -11,6 +11,15 @@
             height: 200px;
         }
 
+        body {
+          /* ???? 적용 되지 않는다.??? */
+          /* height: 100vh; */ 
+          /* height: 2000px; */
+        }
+
+        aside {
+          height: 2000px;
+        }
         a {
         /* color: #428BCA; */
         text-decoration: none;
@@ -50,25 +59,11 @@
             </div>
         </header>
     </div>
+
     <div class="container-fluid vh-100 p-0">
       <div class="row">
-        <div class="col-2 vh-100 bg-dark">
-            <aside class="text-light">
-                <!-- <div class="period">
-                   
-                </div>
-                <div class="btn-group w-100" role="group">
-                    <button id="btnGroupDrop1" type="button" class="btn btn-dark text-light text-left dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                      서비스 관리
-                    </button>
-                    <ul class="dropdown-menu w-100" aria-labelledby="btnGroupDrop1">
-                      <li><a class="dropdown-item" href="#">계정관리</a></li>
-                      <li><a class="dropdown-item" href="#">사용자관리</a></li>
-                      <li><a class="dropdown-item" href="#">포인트관리</a></li>
-                      <li><a class="dropdown-item" href="#">연동서비스관리</a></li>
-                      <li><a class="dropdown-item" href="#">결제내역조회</a></li>
-                    </ul>
-                  </div> -->
+        <div class="col-2 vh-100 ">
+            <aside class="text-light bg-dark">
 
                   <div class="accordion accordion-flush" id="accordionFlushExample">
                     <div class="top-info">
@@ -104,6 +99,8 @@
             </aside>
         </div>
         <div class="col-10 bg-light">
+
+
           <section>
             <article>
 
@@ -118,15 +115,16 @@
                 </div>
 
                 <div class="container-fluid">
-                  <div class="row align-items-center">
+                  <div class="row align-items-center border border-secondary">
                     <div class="col-6">
-                      <div class="member-search-container container p-3 bg-success mx-0">
+                      <div class="member-search-container container p-3 mx-0">
                         <div class="row justify-content-start align-items-center">
-                          <div class="col-3 bg-warning">
+                          <div class="col-3">
                             <div class="">회원등급</div>
+                            <div class="">수신동의</div>
                             <div class="">검색</div>
                           </div>
-                          <div class="col-8 offset-1 bg-secondary">
+                          <div class="col-8 offset-1">
                             <form action="">
                               <div class="">
                                 <div>
@@ -137,6 +135,12 @@
                                   <input type="checkbox" name="wait-join" id="">
                                   <label for="wait-join">가입신청자</label>
                                 </div>
+                                <div>
+                                  <input type="checkbox" name="entire-member" id="">
+                                  <label for="entire-member">SMS</label>
+                                  <input type="checkbox" name="wait-leaver" id="">
+                                  <label for="wait-leaver">이메일</label>
+                                  </div>
                                 <div class="">
                                 <!-- <div class="row"> -->
                                   <!-- <div class="col p-0 mx-0"> -->
@@ -162,8 +166,8 @@
 
                     </div>
 
-                    <div class="col offset-5 bg-primary">
-                      <button>검색</button>
+                    <div class="col-1 offset-5 justify-content-center">
+                      <button type="button" class="btn btn-primary btn-lg text-center">검색</button>
                     </div>
                   </div>
                 </div>
@@ -174,6 +178,14 @@
                 <table class="table m-3">
                   <thead>
                     <tr>
+                      <th>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" >
+                          <label class="form-check-label" for="flexCheckDefault">
+                            
+                          </label>
+                        </div>
+                      </th>
                       <th scope="col">번호</th>
                       <th scope="col">아이디</th>
                       <th scope="col">이름</th>
@@ -186,56 +198,422 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <th scope="row">1</th>
+                      <td>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" >
+                          <label class="form-check-label" for="flexCheckDefault">
+                            
+                          </label>
+                        </div>
+                      </td>
+                      <td scope="row">1</td>
                       <td>sd111</td>
                       <td>김하성</td>
                       <td>1</td>
                       <td>1</td>
                       <td>100</td>
                       <td>2021.01.01</td>
-                      <td>////</td>
+                      <td>
+                        <button type="button" class="btn btn-outline-warning">수정</button>
+                        <button type="button" class="btn btn-outline-danger">삭제</button>
+                      </td>
                     </tr>
                     <tr>
-                      <th scope="row">2</th>
+                      <td>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" >
+                          <label class="form-check-label" for="flexCheckDefault">
+                            
+                          </label>
+                        </div>
+                      </td>
+                      <td scope="row">2</td>
                       <td>toronto111</td>
                       <td>류현진</td>
                       <td>1</td>
                       <td>1</td>
                       <td>100</td>
                       <td>2021.01.01</td>
-                      <td>////</td>
+                      <td>
+                        <button type="button" class="btn btn-outline-warning">수정</button>
+                        <button type="button" class="btn btn-outline-danger">삭제</button>
+                      </td>
                     </tr>
                     <tr>
-                      <th scope="row">3</th>
+                      <td>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" >
+                          <label class="form-check-label" for="flexCheckDefault">
+                            
+                          </label>
+                        </div>
+                      </td>
+                      <td scope="row">3</td>
                       <td>sl000</td>
                       <td>김광현 </td>
                       <td>2</td>
                       <td>1</td>
                       <td>50</td>
                       <td>2021.01.01</td>
-                      <td>////</td>
+                      <td>
+                        <button type="button" class="btn btn-outline-warning">수정</button>
+                        <button type="button" class="btn btn-outline-danger">삭제</button>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
 
-                <div class="d-flex justify-content-center">
-                  <nav aria-label="...">
-                    <ul class="pagination">
-                      <li class="page-item disabled">
-                        <a class="page-link" href="#" tabindex="-1">이전</a>
-                      </li>
-                      <li class="page-item"><a class="page-link" href="#">1</a></li>
-                      <li class="page-item active">
-                        <a class="page-link" href="#">2 <span class="sr-only"></span></a>
-                      </li>
-                      <li class="page-item"><a class="page-link" href="#">3</a></li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">다음</a>
-                      </li>
-                    </ul>
-                  </nav>
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col">
+                      <button class="btn btn-success">수정</button>
+                    </div>
+                    <div class="col-10">
+                      
+                       <div class=" d-flex justify-content-center">
+                         <ul class="pagination">
+                           <li class="page-item disabled">
+                             <a class="page-link" href="#" tabindex="-1">이전</a>
+                           </li>
+                           <li class="page-item"><a class="page-link" href="#">1</a></li>
+                           <li class="page-item active">
+                             <a class="page-link" href="#">2 <span class="sr-only"></span></a>
+                           </li>
+                           <li class="page-item"><a class="page-link" href="#">3</a></li>
+                           <li class="page-item">
+                             <a class="page-link" href="#">다음</a>
+                           </li>
+                         </ul>
+                       </div>
+      
+  
+  
+                    </div>
+                    <div class="col">
+                      <button class="btn btn-success">저장</button>
+                    </div>
+                  </div>
                 </div>
 
+
+                <p class="fs-3 my-3">회원가입</p>
+                <p class="fs-4 my-3">회원 기본 정보</p>
+
+                <table class="table table-bordered">
+                  <tbody class=" align-middle">
+                    <tr>
+                      <th scope="row" class="table-dark text-light">아이디</th>
+                      <td colspan="3">
+                        <div class="form-group row align-items-center">
+                          <div class="col-4 w-25">
+                            <input class="form-control"  type="text"> 
+                          </div>
+                         <div class="col">
+                          <span class="d-inline"><a href="#">아이디 중복 체크</a></span>
+                         </div>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row" class="table-dark text-light">비밀번호</th>
+                      <td>
+                        <div class="">
+                          <input class="form-control"  type="text"> 
+                        </div>
+                      </td>
+                      <td class="table-dark text-light">비밀번호 확인</td>
+                      <td>
+                        <div class="">
+                          <input class="form-control"  type="text"> 
+                        </div>
+                      </td>
+                    </tr>
+                    
+                    <tr>
+                      <th scope="row" class="table-dark text-light">이름</th>
+                      <td colspan="3">
+                        <div class="form-group row align-items-center">
+                          <div class="col-4 w-25">
+                            <input class="form-control"  type="text"> 
+                          </div>
+                         <div class="col">
+                          
+                         </div>
+                        </div>
+                      </td>
+                    </tr>
+<!-- 
+                    <tr>
+                      <th scope="row" class="table-dark text-light">이메일</th>
+                      <td colspan="3">
+                        <div class="row">
+                          <div class="col-2">
+                            <input class="form-control" type="text">
+                          </div>
+                          <div class="col-4">
+                            <div class="d-flex justify-content-start align-items-center">
+                              <span class="px-3">@</span>
+                              <input class="form-control" type="text"> 
+                            </div>
+                          </div>            
+                          <div class="col">
+                            <div class="d-flex justify-content-start align-items-center">
+                              <span class="px-3"><a href="#">이메일 중복 체크</a></span>
+                              <input class="form-check-input" type="checkbox" value="" >
+                              <label class="form-check-label" for="flexCheckDefault">
+                                이메일 수신 동의
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr> -->
+                    <tr>
+                      <th scope="row" class="table-dark text-light">이메일</th>
+                      <td colspan="3">
+                        <div class="row">
+                          <div class="col">
+                            <div class="d-flex justify-content-start align-items-center">
+                              <input class="form-control" type="text">
+                              <span class="px-1">@</span>
+                              <input class="form-control" type="text"> 
+                            </div>
+                          </div>
+                          <div class="col align-self-center">
+                            <div class="d-flex justify-content-start">
+                              <span class="d-inline"><a href="#">중복 체크</a></span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-2 align-self-center py-3">
+                          <div class="d-flex justify-content-start">
+                            <input class="form-check-input" type="checkbox" value="" >
+                            <label class="form-check-label px-3" for="">
+                              이메일 수신 동의
+                            </label>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="table-dark text-light">등급설정</th>
+                      <td colspan="3">
+                        <div class="d-flex justify-content-start align-items-center w-25">
+                          <select class="form-select" aria-label="Default select example">
+                            <option selected>일반회원</option>
+                            <option value="1">일반회원</option>
+                            <option value="2"></option>
+                            <option value="3"></option>
+                          </select> 
+                      </div>
+                      </td>
+                    </tr> 
+
+                  </tbody>
+                </table>
+
+
+                <p class="fs-4 my-3">사이트 가입 정보</p>
+
+
+                  <!-- 부트스트랩은 rowspan이 안먹는 듯 하다.-->
+                  <table class="table table-bordered">
+                    <tbody class=" align-middle">
+                      <tr>
+                        <th scope="row" class="table-dark text-light">주소</th>
+                        <td colspan="3">
+                          <div class="col">
+
+                          </div>
+                          <div class="d-flex justify-content-start align-items-center">
+                              <input class="form-control w-25"  type="text"> 
+                              <span class="d-inline px-3"><a href="#">우편번호 찾기</a></span>
+                              <input class="form-check-input" type="checkbox" value="" >
+                              <label class="form-check-label px-3" for="flexCheckDefault">
+                                해외
+                              </label>
+                          </div>    
+                            <div class="w-100"></div>
+                            <div class="row pt-3">
+                              <div class="col-5">
+                                <input class="form-control"  type="text"> 
+                              </div>
+                              <div class="col-5">
+                                <input class="form-control"  type="text"> 
+                              </div>
+                            </div>
+                          </div>
+                        </td> 
+                      </tr>
+  
+                      <tr>
+                        <th scope="row" class="table-dark text-light">전화번호</th>
+                        <td>
+                          <div class="row">
+                            <div class="col-7">
+                              <div class="d-flex justify-content-start align-items-center">
+                                <select class="form-select w-25" aria-label="Default select example">
+                                  <option selected>선택</option>
+                                  <option value="1">010</option>
+                                  <option value="2">011</option>
+                                  <option value="3"></option>
+                                </select>
+                                <p class="px-3">-</p>
+                                <input class="form-control w-50"  type="text">
+                                <p class="px-3">-</p>
+                                <input class="form-control w-50"  type="text">
+                              </div> 
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      
+                      <tr>
+                        <th scope="row" class="table-dark text-light">휴대전화</th>
+                        <td>
+                          <div class="row">
+                            <div class="col-7">
+                              <div class="d-flex justify-content-start align-items-center">
+                                <select class="form-select w-25" aria-label="Default select example">
+                                  <option selected>선택</option>
+                                  <option value="1">010</option>
+                                  <option value="2">011</option>
+                                  <option value="3"></option>
+                                </select>
+                                <p class="px-3">-</p>
+                                <input class="form-control w-50"  type="text">
+                                <p class="px-3">-</p>
+                                <input class="form-control w-50"  type="text">
+                              </div> 
+                            </div>
+                            <div class="col align-self-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" >
+                                <label class="form-check-label" for="flexCheckDefault">
+                                  SMS 수신 동의
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row" class="table-dark text-light">별명</th>
+                        <td colspan="3">
+                          <div class="form-group row align-items-center">
+                            <div class="col-4 w-25">
+                              <input class="form-control"  type="text"> 
+                            </div>
+                           <div class="col">
+                            <span class="d-inline"><a href="#">중복 체크</a></span>
+                           </div>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row" class="table-dark text-light">생년월일</th>
+                        <td colspan="3">
+                          <div class="row">
+                            <div class="col">
+                              <div class="d-flex justify-content-start align-items-center">
+                                <select class="form-select w-25 px-3">
+                                  <option selected></option>
+                                  <option value="1">1999</option>
+                                  <option value="2">2000</option>
+                                  <option value="3">2001</option>
+                                </select>
+                                <label class="form-select-label px-3" for="flexCheckDefault">
+                                  년
+                                </label>
+                                <select class="form-select w-25">
+                                  <option selected></option>
+                                  <option value="1">1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                </select>
+                                <label class="form-select-label px-3" for="flexCheckDefault">
+                                  월
+                                </label>
+                                <select class="form-select w-25">
+                                  <option selected></option>
+                                  <option value="1">1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                </select>
+                                <label class="form-select-label px-3" for="flexCheckDefault">
+                                  일
+                                </label>
+                              </div>    
+                            </div>
+                            
+                            <div class="col-7 align-self-center">
+                              <input class="form-check-input" type="checkbox" value="">
+                              <span class="d-inline px-3"><a href="#">음력</a></span>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row" class="table-dark text-light">사용자 정의1</th>
+                        <td colspan="3">
+                          <div class="form-group row align-items-center">
+                            <div class="col-4 w-25">
+                              <input class="form-control"  type="text"> 
+                            </div>
+                           <div class="col">
+                           
+                           </div>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row" class="table-dark text-light">성별</th>
+                        <td colspan="3">
+                          <div class="row">
+                            <div class="col">
+                              <div class="d-flex justify-content-start align-items-center">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault">
+                                <label class="form-check-label px-3" for="flexRadioDefault1">
+                                남자
+                                </label>
+                                <input class="form-check-input" type="radio" name="flexRadioDefault">
+                                <label class="form-check-label px-3" for="flexRadioDefault1">
+                                여자
+                                </label>
+                              </div>
+                            </div>
+                           <div class="col">
+                           
+                           </div>
+                          </div>
+                        </td>
+                      </tr>
+
+
+                </tbody>
+              </table>
+
+              <p class="fs-4 my-3">관리자 메모</p>
+
+              <div class="form-group">
+                <textarea class="form-control" rows="4"></textarea>
+              </div>
+
+              <div class="container-fluid">
+                <div class="row justify-content-center">
+                  <div class="col">
+                    <div class="d-flex justify-content-center align-items-center">
+                      <button class="btn btn-primary m-3">등록</button>
+                      <button type="button" class="btn btn-outline-dark">취소</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
             </article>
       
